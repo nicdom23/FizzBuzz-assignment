@@ -1,5 +1,5 @@
 plugins {
-    id 'java'
+    id 'application'
 }
 
 group 'dssc.assignment'
@@ -16,4 +16,15 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+application{
+    mainClass = 'dssc.assignment.fizzbuzz'
+
+}
+
+jar{
+    manifest{
+        attributes 'Main-Class': 'dssc.assignment.fizzbuzz.FizzBuzz'
+    }
 }
